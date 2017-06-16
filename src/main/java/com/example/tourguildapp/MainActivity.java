@@ -20,7 +20,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +43,6 @@ public class MainActivity extends AppCompatActivity
         mTabLayout = (TabLayout) findViewById(R.id.mytab);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +61,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -96,7 +92,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -167,6 +162,14 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    return new Restrant();
+                case 1:
+                    return new Fun();
+                case 2:
+                    return new IntrestingPlaces();
+            }
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             return PlaceholderFragment.newInstance(guidApp.get(position));
