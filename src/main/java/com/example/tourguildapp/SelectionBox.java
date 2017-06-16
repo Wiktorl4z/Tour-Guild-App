@@ -12,8 +12,6 @@ public class SelectionBox extends Fragment {
 
     private ImageView mImageView;
     private TextView mName, mPlace;
-    private TextView score;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
