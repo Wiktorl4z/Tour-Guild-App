@@ -6,14 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Fun extends Fragment {
-
-    private ArrayList array;
+public class RestaurantTab extends Fragment {
 
     @Nullable
     @Override
@@ -21,15 +18,13 @@ public class Fun extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_main2, container, false);
 
+        ArrayList<DesignClass> arrayList = new ArrayList<>();
+        arrayList.add(new DesignClass(R.drawable.czarcia_lapa, "Czarcia Lapa", "Lublin"));
+        arrayList.add(new DesignClass(R.drawable.stol_wol, "Stol i Wol", "Lublin"));
+        arrayList.add(new DesignClass(R.drawable.zydowska, "Zydowska Restauracja", "Lublin"));
+        arrayList.add(new DesignClass(R.drawable.perlowa_pijalnia, "Perlowa Pijalnia Piwa", "Lublin"));
 
-
-        ArrayList<Club> arrayList = new ArrayList<>();
-        arrayList.add(new Club(R.drawable.cream_fixed, "Cream", "Lublin"));
-        arrayList.add(new Club(R.drawable.czekolada_fixed, "Czekolada", "Lublin"));
-        arrayList.add(new Club(R.drawable.shine_fixed, "Shine", "Lublin"));
-        arrayList.add(new Club(R.drawable.silence_fixed, "Silence", "Lublin"));
-
-        ClubAdapter clubA = new ClubAdapter(getActivity(), arrayList);
+        DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
 
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) view.findViewById(R.id.listview_flavor);

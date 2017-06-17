@@ -150,13 +150,12 @@ public class MainActivity extends AppCompatActivity
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        // where is your arraylist?
         ArrayList<String> guidApp = new ArrayList<>();
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
             guidApp.add("Restaurants");
-            guidApp.add("Fun Places");
+            guidApp.add("DesignClass Places");
             guidApp.add("Interesting Places");
         }
 
@@ -164,11 +163,11 @@ public class MainActivity extends AppCompatActivity
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return new Restrant();
+                    return new RestaurantTab();
                 case 1:
-                    return new Fun();
+                    return new FunTab();
                 case 2:
-                    return new IntrestingPlaces();
+                    return new IntrestingPlacesTab();
             }
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).

@@ -8,7 +8,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@android:color/black" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,11 +17,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
         <ImageView
             android:id="@+id/image"
             android:layout_width="200px"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_menu_camera" />
+            android:layout_height="match_parent" />
 
         <View
             android:layout_width="1dp"
@@ -37,7 +41,7 @@
             <TextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="name"
                 android:textSize="30sp" />
 
@@ -49,7 +53,7 @@
             <TextView
                 android:id="@+id/place"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="place"
                 android:textSize="30sp" />
 
@@ -63,6 +67,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@android:color/black" />
 </LinearLayout>
