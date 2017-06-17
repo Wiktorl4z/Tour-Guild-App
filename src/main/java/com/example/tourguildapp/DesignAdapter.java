@@ -1,6 +1,9 @@
 package com.example.tourguildapp;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,11 +43,40 @@ public class DesignAdapter extends ArrayAdapter<DesignClass> {
         // set this text on the name TextView
         nameTextView.setText(currentlyDesignClassFlavor.getmName());
 
+        TextView textView = (TextView) listItemView.findViewById(R.id.contact);
+        textView.setText(currentlyDesignClassFlavor.getmPhone());
+
+
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.place);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        numberTextView.setText(currentlyDesignClassFlavor.getmPlace());
+        numberTextView.setText(currentlyDesignClassFlavor.getmAdress());
+        /*numberTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentItem.hasAddress()) {
+                    address.setText(currentItem.getAddress());
+                    address.setPaintFlags(address.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                    address.setVisibility(View.VISIBLE);
+                    addressIcon.setVisibility(View.VISIBLE);
+                    address.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String mapAddress = "http://maps.google.co.in/maps?q=" + currentItem.getAddress();
+                            Uri mapUri = Uri.parse(mapAddress);
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
+                            mapIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mapIntent.setPackage("com.google.android.apps.maps");
+                            _context.getApplicationContext().startActivity(mapIntent);
+                        }
+                    });
+                } else {
+                    address.setVisibility(View.GONE);
+                    addressIcon.setVisibility(View.GONE);
+                }
+            }
+        });*/
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);

@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
             guidApp.add("Restaurants");
-            guidApp.add("DesignClass Places");
+            guidApp.add("Clubs");
             guidApp.add("Interesting Places");
         }
 
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity
                 case 0:
                     return new RestaurantTab();
                 case 1:
-                    return new FunTab();
+                    return new ClubTab();
                 case 2:
                     return new IntrestingPlacesTab();
             }

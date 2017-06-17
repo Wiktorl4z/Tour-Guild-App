@@ -19,10 +19,10 @@ public class RestaurantTab extends Fragment {
         View view = inflater.inflate(R.layout.activity_main2, container, false);
 
         ArrayList<DesignClass> arrayList = new ArrayList<>();
-        arrayList.add(new DesignClass(R.drawable.czarcia_lapa, "Czarcia Lapa", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.stol_wol, "Stol i Wol", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.zydowska, "Zydowska Restauracja", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.perlowa_pijalnia, "Perlowa Pijalnia Piwa", "Lublin"));
+        arrayList.add(new DesignClass(R.drawable.czarcia_lapa, "Czarcia Lapa", "Rynek 19, 20-111 Lublin", "81 532 82 00"));
+        arrayList.add(new DesignClass(R.drawable.stol_wol, "Stol i Wol", "Bramowa 2, 20-111 Lublin", "81 565 55 55"));
+        arrayList.add(new DesignClass(R.drawable.zydowska, "Mandragora", "Rynek 9, 20-400 Lublin", "81 536 20 20"));
+        arrayList.add(new DesignClass(R.drawable.perlowa_pijalnia, "Perlowa Pijalnia Piwa", "Bernardyńska 15A, 20-001 Lublin", "81 710 12 05"));
 
         DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
 

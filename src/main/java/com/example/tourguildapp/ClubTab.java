@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class FunTab extends Fragment {
+public class ClubTab extends Fragment {
 
     @Nullable
     @Override
@@ -19,10 +19,10 @@ public class FunTab extends Fragment {
         View view = inflater.inflate(R.layout.activity_main2, container, false);
 
         ArrayList<DesignClass> arrayList = new ArrayList<>();
-        arrayList.add(new DesignClass(R.drawable.cream_fixed, "Cream", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.czekolada_fixed, "Czekolada", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.shine_fixed, "Shine", "Lublin"));
-        arrayList.add(new DesignClass(R.drawable.silence_fixed, "Silence", "Lublin"));
+        arrayList.add(new DesignClass(R.drawable.cream_fixed, "Cream Club", "Jasna 7, 20-077 Lublin", "535 715 692"));
+        arrayList.add(new DesignClass(R.drawable.czekolada_fixed, "Czekolada Club", "Narutowicza 9, 20-002 Lublin", "727 507 905"));
+        arrayList.add(new DesignClass(R.drawable.shine_fixed, "Shine Club", "Jasna 7, 20-077 Lublin", "725 700 225"));
+        arrayList.add(new DesignClass(R.drawable.silence_fixed, "Silence Club", "Radziszewskiego 8, Lublin", "81 477 57 98"));
 
         DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
 
