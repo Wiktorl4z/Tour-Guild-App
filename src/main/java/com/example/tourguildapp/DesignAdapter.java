@@ -15,8 +15,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class DesignAdapter extends ArrayAdapter<DesignClass> {
-    private Context _context;
-    private static final String LOG_TAG = DesignClass.class.getSimpleName();
 
     public DesignAdapter(Activity context, ArrayList<DesignClass> designClassAdapters) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.

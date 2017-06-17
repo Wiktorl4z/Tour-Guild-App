@@ -8,6 +8,14 @@ public class DesignClass {
     private String mAdress;
     private String mPhone;
 
+
+    /**
+     *
+     * @param mImageResource
+     * @param mName
+     * @param mAdress
+     * @param mPhone
+     */
     public DesignClass(int mImageResource, String mName, String mAdress, String mPhone) {
         this.mImageResource = mImageResource;
         this.mName = mName;

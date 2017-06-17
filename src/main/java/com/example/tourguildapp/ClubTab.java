@@ -19,10 +19,10 @@ public class ClubTab extends Fragment {
         View view = inflater.inflate(R.layout.activity_main2, container, false);
 
         ArrayList<DesignClass> arrayList = new ArrayList<>();
-        arrayList.add(new DesignClass(R.drawable.cream_fixed, "Cream Club", "Jasna 7, 20-077 Lublin", "535 715 692"));
-        arrayList.add(new DesignClass(R.drawable.czekolada_fixed, "Czekolada Club", "Narutowicza 9, 20-002 Lublin", "727 507 905"));
-        arrayList.add(new DesignClass(R.drawable.shine_fixed, "Shine Club", "Jasna 7, 20-077 Lublin", "725 700 225"));
-        arrayList.add(new DesignClass(R.drawable.silence_fixed, "Silence Club", "Radziszewskiego 8, Lublin", "81 477 57 98"));
+        arrayList.add(new DesignClass(R.drawable.cream_fixed, getString(R.string.creamClub), getString(R.string.jasna_7), getString(R.string.creamNumber)));
+        arrayList.add(new DesignClass(R.drawable.czekolada_fixed, getString(R.string.czekoladaClub), getString(R.string.narutowicza9), getString(R.string.czekoladaNumber)));
+        arrayList.add(new DesignClass(R.drawable.shine_fixed, getString(R.string.shineClub), getString(R.string.jasna7), getString(R.string.shineNumber)));
+        arrayList.add(new DesignClass(R.drawable.silence_fixed, getString(R.string.silenceClub), getString(R.string.radziszewskiego8), getString(R.string.silenceNumber)));
 
         DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
 

@@ -18,10 +18,10 @@ public class RestaurantTab extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_main2, container, false);
         ArrayList<DesignClass> arrayList = new ArrayList<>();
-        arrayList.add(new DesignClass(R.drawable.czarcia_lapa, "Czarcia Lapa", "Rynek 19, 20-111 Lublin", "81 532 82 00"));
-        arrayList.add(new DesignClass(R.drawable.stol_wol, "Stol i Wol", "Bramowa 2, 20-111 Lublin", "81 565 55 55"));
-        arrayList.add(new DesignClass(R.drawable.zydowska, "Mandragora", "Rynek 9, 20-400 Lublin", "81 536 20 20"));
-        arrayList.add(new DesignClass(R.drawable.perlowa_pijalnia, "Perlowa Pijalnia Piwa", "Bernardyńska 15A, 20-001 Lublin", "81 710 12 05"));
+        arrayList.add(new DesignClass(R.drawable.czarcia_lapa, getString(R.string.czarcia), getString(R.string.runekAdress), getString(R.string.czarciaNumber)));
+        arrayList.add(new DesignClass(R.drawable.stol_wol, getString(R.string.stolIWol), getString(R.string.bramaAdress), getString(R.string.stolNumber)));
+        arrayList.add(new DesignClass(R.drawable.zydowska, getString(R.string.zydowska), getString(R.string.rynekAdress), getString(R.string.rynekNumber)));
+        arrayList.add(new DesignClass(R.drawable.perlowa_pijalnia, getString(R.string.perlowa), getString(R.string.bernardynskaAdress), getString(R.string.perlowaNumber)));
 
         DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
         // Get a reference to the ListView, and attach the adapter to the listView.
