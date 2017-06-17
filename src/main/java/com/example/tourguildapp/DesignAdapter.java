@@ -1,6 +1,7 @@
 package com.example.tourguildapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class DesignAdapter extends ArrayAdapter<DesignClass> {
-
+    private Context _context;
     private static final String LOG_TAG = DesignClass.class.getSimpleName();
 
     public DesignAdapter(Activity context, ArrayList<DesignClass> designClassAdapters) {
@@ -35,55 +36,35 @@ public class DesignAdapter extends ArrayAdapter<DesignClass> {
         }
 
         // Get the {@link AndroidFlavor} object located at this position in the list
-        DesignClass currentlyDesignClassFlavor = getItem(position);
-
+        final DesignClass currentItem = getItem(position);
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.name);
+        TextView nameView = (TextView) listItemView.findViewById(R.id.name);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        nameTextView.setText(currentlyDesignClassFlavor.getmName());
-
-        TextView textView = (TextView) listItemView.findViewById(R.id.contact);
-        textView.setText(currentlyDesignClassFlavor.getmPhone());
-
-
+        nameView.setText(currentItem.getmName());
+        TextView contactView = (TextView) listItemView.findViewById(R.id.contact);
+        contactView.setText(currentItem.getmPhone());
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.place);
+        final TextView placeView = (TextView) listItemView.findViewById(R.id.place);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        numberTextView.setText(currentlyDesignClassFlavor.getmAdress());
-        /*numberTextView.setOnClickListener(new View.OnClickListener() {
+        placeView.setText(currentItem.getmAdress());
+        placeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (currentItem.hasAddress()) {
-                    address.setText(currentItem.getAddress());
-                    address.setPaintFlags(address.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                    address.setVisibility(View.VISIBLE);
-                    addressIcon.setVisibility(View.VISIBLE);
-                    address.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String mapAddress = "http://maps.google.co.in/maps?q=" + currentItem.getAddress();
-                            Uri mapUri = Uri.parse(mapAddress);
-                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
-                            mapIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            mapIntent.setPackage("com.google.android.apps.maps");
-                            _context.getApplicationContext().startActivity(mapIntent);
-                        }
-                    });
-                } else {
-                    address.setVisibility(View.GONE);
-                    addressIcon.setVisibility(View.GONE);
-                }
+                String mapAddress = "http://maps.google.co.in/maps?q=" + currentItem.getmAdress();
+                Uri mapUri = Uri.parse(mapAddress);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
+                mapIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                getContext().startActivity(mapIntent);
             }
-        });*/
-
+        });
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
         // Get the image resource ID from the current AndroidFlavor object and
         // set the image to iconView
-        iconView.setImageResource(currentlyDesignClassFlavor.getmImageResource());
-
+        iconView.setImageResource(currentItem.getmImageResource());
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;

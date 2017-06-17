@@ -34,5 +34,4 @@ public class DesignClass {
     public boolean hasAddress() {
         return mAdress != NO_ADDRESS_PROVIDED;
     }
-
 }
