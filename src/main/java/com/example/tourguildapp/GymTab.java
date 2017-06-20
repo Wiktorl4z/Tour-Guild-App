@@ -10,26 +10,23 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ClubTab extends Fragment {
+public class GymTab extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.activity_main2, container, false);
-        
         ArrayList<DesignClass> arrayList = new ArrayList<>();
-        arrayList.add(new DesignClass(R.drawable.cream_fixed, getString(R.string.creamClub), getString(R.string.jasna_7), getString(R.string.creamNumber)));
-        arrayList.add(new DesignClass(R.drawable.czekolada_fixed, getString(R.string.czekoladaClub), getString(R.string.narutowicza9), getString(R.string.czekoladaNumber)));
-        arrayList.add(new DesignClass(R.drawable.shine_fixed, getString(R.string.shineClub), getString(R.string.jasna7), getString(R.string.shineNumber)));
-        arrayList.add(new DesignClass(R.drawable.silence_fixed, getString(R.string.silenceClub), getString(R.string.radziszewskiego8), getString(R.string.silenceNumber)));
+        arrayList.add(new DesignClass(R.drawable.paco_fixed, getString(R.string.paco), getString(R.string.pacoStreet), getString(R.string.pacoNumber)));
+        arrayList.add(new DesignClass(R.drawable.samson_fixed, getString(R.string.samson), getString(R.string.samsonAdress), getString(R.string.samsonNumber)));
+        arrayList.add(new DesignClass(R.drawable.city_fit, getString(R.string.cityFit), getString(R.string.citiFitAdress), getString(R.string.cityFitNumber)));
+        arrayList.add(new DesignClass(R.drawable.dragon_fixed, getString(R.string.dragon), getString(R.string.dragonAdress), getString(R.string.dragonNumber)));
 
         DesignAdapter clubA = new DesignAdapter(getActivity(), arrayList);
-
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) view.findViewById(R.id.listview_flavor);
         listView.setAdapter(clubA);
-
         return view;
     }
 }

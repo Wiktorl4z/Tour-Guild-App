@@ -8,7 +8,6 @@ public class DesignClass {
     private String mAdress;
     private String mPhone;
 
-
     /**
      *
      * @param mImageResource

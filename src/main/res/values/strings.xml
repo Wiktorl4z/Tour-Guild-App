@@ -24,7 +24,7 @@
     <string name="bramaAdres">Bramowa 2</string>
     <string name="bramaNumber">81 532 60 01</string>
     <string name="majdanek">Majdanek</string>
-    <string name="drogaAdress">Droga Męczenników Majdanka</string>
+    <string name="drogaAdress">Męczenników Majdanka</string>
     <string name="majdanekNumber">81 710 28 33</string>
     <string name="katedra">Katedra Św Jana Chrzciciela</string>
     <string name="katedraAdress">Królewska 10</string>
@@ -41,4 +41,21 @@
     <string name="perlowa">Perlowa Pijalnia Piwa</string>
     <string name="bernardynskaAdress">Bernardyńska 15A</string>
     <string name="perlowaNumber">81 710 12 05</string>
+    <string name="none">None</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="clubs">Clubs</string>
+    <string name="intresting_places">Interesting Places</string>
+    <string name="gym">Gym</string>
+    <string name="paco">Paco</string>
+    <string name="pacoStreet">Tomasza Zana 72</string>
+    <string name="pacoNumber">81 524 34 55</string>
+    <string name="samson">Samson</string>
+    <string name="samsonAdress">Lipowa 17</string>
+    <string name="samsonNumber">81 532 50 25</string>
+    <string name="cityFit">CityFit</string>
+    <string name="citiFitAdress">Spółdzielczości Pracy 26</string>
+    <string name="cityFitNumber">22 584 57 22</string>
+    <string name="dragon">Dragon</string>
+    <string name="dragonAdress">Juranda 7</string>
+    <string name="dragonNumber">506 022 300</string>
 </resources>

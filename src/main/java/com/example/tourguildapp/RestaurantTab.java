@@ -17,6 +17,7 @@ public class RestaurantTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.activity_main2, container, false);
+
         ArrayList<DesignClass> arrayList = new ArrayList<>();
         arrayList.add(new DesignClass(R.drawable.czarcia_lapa, getString(R.string.czarcia), getString(R.string.runekAdress), getString(R.string.czarciaNumber)));
         arrayList.add(new DesignClass(R.drawable.stol_wol, getString(R.string.stolIWol), getString(R.string.bramaAdress), getString(R.string.stolNumber)));
