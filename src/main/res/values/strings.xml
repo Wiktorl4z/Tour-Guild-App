@@ -58,4 +58,6 @@
     <string name="dragon">Dragon</string>
     <string name="dragonAdress">Juranda 7</string>
     <string name="dragonNumber">506 022 300</string>
+    <string name="map_url">http://maps.google.co.in/maps?q=</string>
+    <string name="map_app">com.google.android.apps.maps</string>
 </resources>

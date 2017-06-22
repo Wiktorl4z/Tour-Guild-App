@@ -16,12 +16,15 @@ import java.util.ArrayList;
 
 public class DesignAdapter extends ArrayAdapter<DesignClass> {
 
+    private Context mContext;
+
     public DesignAdapter(Activity context, ArrayList<DesignClass> designClassAdapters) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, designClassAdapters);
+        mContext = context;
     }
 
     @Override
@@ -50,11 +53,11 @@ public class DesignAdapter extends ArrayAdapter<DesignClass> {
         placeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String mapAddress = "http://maps.google.co.in/maps?q=" + currentItem.getmAdress();
+                String mapAddress = mContext.getString(R.string.map_url) + currentItem.getmAdress();
                 Uri mapUri = Uri.parse(mapAddress);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
                 mapIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mapIntent.setPackage("com.google.android.apps.maps");
+                mapIntent.setPackage(mContext.getString(R.string.map_app));
                 getContext().startActivity(mapIntent);
             }
         });
