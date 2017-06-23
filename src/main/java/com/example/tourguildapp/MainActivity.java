@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
-            guidApp.add(getString(R.string.restaurants));
+            guidApp.add(getString(R.string.pubs));
             guidApp.add(getString(R.string.clubs));
             guidApp.add(getString(R.string.intresting_places));
             guidApp.add(getString(R.string.gym));
